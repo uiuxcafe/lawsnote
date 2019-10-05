@@ -1,0 +1,9 @@
+{
+	"framer": {
+		"id": "5c17bee8-4eeb-4788-b0bf-edbb6dddae42"
+	},
+	"peerDependencies": {
+		"framer": "^1"
+	},
+	"author": "劉卓昕"
+}
