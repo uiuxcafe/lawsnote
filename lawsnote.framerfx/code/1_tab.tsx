@@ -17,8 +17,12 @@ const data = Data({
     isDChecked: false,
     hideblock: false, // 隱藏 第三層 checkbox 區塊
     pHeight: 793,
-    ABodyHeight: 230,
-    BBodyHeight: 230,
+    ABodyHeight_1: 30,
+    ABodyHeight_2: 200,
+    BBodyHeight_1: 30,
+    BBodyHeight_2: 200,
+    CBodyHeight_1: 30,
+    CBodyHeight_2: 200,
     number_1: false,
     number_2: false,
     listnumber_1: false,
@@ -46,8 +50,12 @@ export const bnTab1: Override = () => {
             data.isDChecked = false
             data.dWidth = 0
             data.hideblock = false
-            data.ABodyHeight = 230
-            data.BBodyHeight = 230
+            data.ABodyHeight_1 = 30
+            data.ABodyHeight_2 = 200
+            data.BBodyHeight_1 = 30
+            data.BBodyHeight_2 = 200
+            data.CBodyHeight_1 = 30
+            data.CBodyHeight_2 = 200
             ;(data.number_1 = false), (data.number_2 = false)
             data.listnumber_1 = false
             data.listnumber_2 = false
@@ -72,8 +80,12 @@ export const bnTab2: Override = () => {
             data.isDChecked = false
             data.dWidth = 0
             data.hideblock = true
-            data.ABodyHeight = 0
-            data.BBodyHeight = 0
+            data.ABodyHeight_1 = 30
+            data.ABodyHeight_2 = 200
+            data.BBodyHeight_1 = 0
+            data.BBodyHeight_2 = 0
+            data.CBodyHeight_1 = 0
+            data.CBodyHeight_2 = 0
             ;(data.number_1 = true), (data.number_2 = false)
             data.listnumber_1 = true
             data.listnumber_2 = false
@@ -98,8 +110,12 @@ export const bnTab3: Override = () => {
             data.isDChecked = false
             data.dWidth = 0
             data.hideblock = true
-            data.ABodyHeight = 230
-            data.BBodyHeight = 0
+            data.ABodyHeight_1 = 30
+            data.ABodyHeight_2 = 200
+            data.BBodyHeight_1 = 30
+            data.BBodyHeight_2 = 200
+            data.CBodyHeight_1 = 0
+            data.CBodyHeight_2 = 0
             ;(data.number_1 = false), (data.number_2 = true)
             data.listnumber_1 = false
             data.listnumber_2 = true
@@ -124,8 +140,12 @@ export const bnTab4: Override = () => {
             data.isDChecked = false
             data.dWidth = 0
             data.hideblock = true
-            data.ABodyHeight = 0
-            data.BBodyHeight = 230
+            data.ABodyHeight_1 = 30
+            data.ABodyHeight_2 = 200
+            data.BBodyHeight_1 = 0
+            data.BBodyHeight_2 = 0
+            data.CBodyHeight_1 = 30
+            data.CBodyHeight_2 = 200
             ;(data.number_1 = false), (data.number_2 = true)
             data.listnumber_1 = true
             data.listnumber_2 = false
@@ -150,8 +170,12 @@ export const bnTab5: Override = () => {
             data.isDChecked = true
             data.dWidth = 296
             data.hideblock = true
-            data.ABodyHeight = 230
-            data.BBodyHeight = 230
+            data.ABodyHeight_1 = 30
+            data.ABodyHeight_2 = 200
+            data.BBodyHeight_1 = 30
+            data.BBodyHeight_2 = 200
+            data.CBodyHeight_1 = 30
+            data.CBodyHeight_2 = 200
             ;(data.number_1 = false), (data.number_2 = true)
             data.listnumber_1 = false
             data.listnumber_2 = false
@@ -252,18 +276,53 @@ export const CheckedObjectD: Override = () => {
     }
 }
 
-export const ABody: Override = () => {
+export const ABody_1: Override = () => {
     return {
-        animate: { height: data.ABodyHeight },
+        animate: { height: data.ABodyHeight_1 },
+        transition: {
+            duration: 0,
+        },
+    }
+}
+export const ABody_2: Override = () => {
+    return {
+        animate: { height: data.ABodyHeight_2 },
         transition: {
             duration: 0,
         },
     }
 }
 
-export const BBody: Override = () => {
+export const BBody_1: Override = () => {
     return {
-        animate: { height: data.BBodyHeight },
+        animate: { height: data.BBodyHeight_1 },
+        transition: {
+            duration: 0,
+        },
+    }
+}
+
+export const BBody_2: Override = () => {
+    return {
+        animate: { height: data.BBodyHeight_2 },
+        transition: {
+            duration: 0,
+        },
+    }
+}
+
+export const CBody_1: Override = () => {
+    return {
+        animate: { height: data.CBodyHeight_1 },
+        transition: {
+            duration: 0,
+        },
+    }
+}
+
+export const CBody_2: Override = () => {
+    return {
+        animate: { height: data.CBodyHeight_2 },
         transition: {
             duration: 0,
         },

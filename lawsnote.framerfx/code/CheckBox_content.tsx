@@ -4,7 +4,7 @@ import { Data, animate, Override } from "framer"
 const data = Data({
     pHeight: 104,
     p2Height: 104,
-    // p3Height: 77,
+    p3Height: 77,
     // p4Height: 77,
     fwidth1: 0,
     fwidth2: 0,
@@ -44,18 +44,18 @@ export const CheckBoxD2: Override = () => {
     }
 }
 
-// export const CheckBoxD3: Override = () => {
-//     return {
-//         onTap() {
-//             data.p3Height = isFilter3Checked ? 0 : 77
-//             isFilter3Checked = !isFilter3Checked
-//             // console.log("C is " + isCChecked)
-//             data.fwidth3 = !isFilter3Checked ? 0 : 72
-//             data.fwidth0 =
-//                 data.fwidth1 + data.fwidth2 + data.fwidth3 == 0 ? 91 : 0
-//         },
-//     }
-// }
+export const CheckBoxD3: Override = () => {
+    return {
+        onTap() {
+            data.p3Height = isFilter3Checked ? 0 : 77
+            isFilter3Checked = !isFilter3Checked
+            // console.log("C is " + isCChecked)
+            data.fwidth3 = !isFilter3Checked ? 0 : 72
+            data.fwidth0 =
+                data.fwidth1 + data.fwidth2 + data.fwidth3 == 0 ? 91 : 0
+        },
+    }
+}
 
 // export const CheckBoxD4: Override = () => {
 //     return {
