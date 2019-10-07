@@ -2,10 +2,10 @@ import { Data, animate, Override } from "framer"
 
 // Filter 功能
 const data = Data({
-    pHeight: 77,
-    p2Height: 77,
-    p3Height: 77,
-    p4Height: 77,
+    pHeight: 104,
+    p2Height: 104,
+    // p3Height: 77,
+    // p4Height: 77,
     fwidth1: 0,
     fwidth2: 0,
     fwidth3: 0,
@@ -21,7 +21,7 @@ let isFilter4Checked = false
 export const CheckBoxD1: Override = () => {
     return {
         onTap() {
-            data.pHeight = !isFilter1Checked ? 0 : 77
+            data.pHeight = !isFilter1Checked ? 0 : 104
             isFilter1Checked = !isFilter1Checked
             // console.log("C is " + isCChecked)
             data.fwidth1 = !isFilter1Checked ? 0 : 48
@@ -34,7 +34,7 @@ export const CheckBoxD1: Override = () => {
 export const CheckBoxD2: Override = () => {
     return {
         onTap() {
-            data.p2Height = !isFilter2Checked ? 0 : 77
+            data.p2Height = !isFilter2Checked ? 0 : 104
             isFilter2Checked = !isFilter2Checked
             // console.log("C is " + isCChecked)
             data.fwidth2 = !isFilter2Checked ? 0 : 48
@@ -44,18 +44,18 @@ export const CheckBoxD2: Override = () => {
     }
 }
 
-export const CheckBoxD3: Override = () => {
-    return {
-        onTap() {
-            data.p3Height = isFilter3Checked ? 0 : 77
-            isFilter3Checked = !isFilter3Checked
-            // console.log("C is " + isCChecked)
-            data.fwidth3 = !isFilter3Checked ? 0 : 72
-            data.fwidth0 =
-                data.fwidth1 + data.fwidth2 + data.fwidth3 == 0 ? 91 : 0
-        },
-    }
-}
+// export const CheckBoxD3: Override = () => {
+//     return {
+//         onTap() {
+//             data.p3Height = isFilter3Checked ? 0 : 77
+//             isFilter3Checked = !isFilter3Checked
+//             // console.log("C is " + isCChecked)
+//             data.fwidth3 = !isFilter3Checked ? 0 : 72
+//             data.fwidth0 =
+//                 data.fwidth1 + data.fwidth2 + data.fwidth3 == 0 ? 91 : 0
+//         },
+//     }
+// }
 
 // export const CheckBoxD4: Override = () => {
 //     return {
