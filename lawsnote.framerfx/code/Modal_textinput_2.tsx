@@ -11,6 +11,8 @@ const data = Data({
     replyHeight: 0,
     doneHeight: 0,
     notibar: false,
+    replyTime: 0,
+    doneTime: 0,
 })
 
 export const textInput: Override = props => {
@@ -38,11 +40,23 @@ export const bnSave: Override = props => {
     return {
         onTap: (text: string) => {
             data.text2 = data.text2 == "" ? "儲存後更新" : data.text
+            // data.text2 = data.text
             data.historyHeight = 338
             data.sendHeight = 92
-            // data.text = data.text == "" ? "即時更新" : data.text
+            data.replyHeight = 244
             // console.log("txt1 = " + data.text)
             data.notibar = true
+            data.replyTime = 1
+        },
+    }
+}
+
+export const bnDone: Override = props => {
+    return {
+        onTap: () => {
+            // data.historyHeight = 444
+            data.doneHeight = 94
+            data.doneTime = 1
         },
     }
 }
@@ -61,7 +75,8 @@ export const sendBody: Override = props => {
 
 export const replyBody: Override = props => {
     return {
-        height: data.replyHeight,
+        animate: { height: data.replyHeight },
+        transition: { duration: 0, delay: 1 },
     }
 }
 
@@ -74,5 +89,19 @@ export const doneBody: Override = props => {
 export const notibar: Override = props => {
     return {
         visible: data.notibar,
+    }
+}
+
+export const replyTime: Override = props => {
+    return {
+        animate: { opacity: data.replyTime },
+        transition: { duration: 0, delay: 1 },
+    }
+}
+
+export const doneTime: Override = props => {
+    return {
+        opacity: data.doneTime,
+        // transition: { duration: 0 },
     }
 }
